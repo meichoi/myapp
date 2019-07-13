@@ -1,0 +1,36 @@
+<!--
+--><div id="lang-selector">
+  <div class="langBox" >
+    <img src="/assets/img/f2.jpeg"  width="50px">
+    <label *ngIf="langCode === 'ko'">선택됨</label>
+    <button type="button" (click)="setLangCode('ko')"
+            [disabled]="langCode==='ko'">한국어</button>
+  </div>
+
+  <div class="langBox">
+    <img src="/assets/img/f1.png"  width="50px">
+    <label *ngIf="langCode === 'en'">선택됨</label>
+    <button type="button" (click)="setLangCode('en')"
+            [disabled]="langCode==='en'">영어</button>
+  </div>
+
+  <div class="langBox">
+    <img src="/assets/img/f3.png"  width="50px">
+    <label *ngIf="langCode === 'fr'">선택됨</label>
+    <button type="button" (click)="setLangCode('fr')"
+            [disabled]="langCode==='fr'">프랑스어</button>
+  </div>
+</div>
+<!--
+<ul>
+<li *ngFor="let fruit of ['오렌지', '사과', '포도']">{{fruit}}</li>
+</ul>-->
+
+<div id="lang-selector2">
+  <div class="langbox" *ngFor="let selLang of langData">
+  <h5>언어:{{selLang.name}}</h5>
+    <label *ngIf="langCode === 'selLang.code'">선택됨</label>
+    <button type="button" (click)="setLangCode(selLang.code)"
+            [disabled]="langCode==='selLang.code'">{{selLang.name}}</button>
+  </div>
+</div>
