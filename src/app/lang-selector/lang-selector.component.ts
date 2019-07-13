@@ -7,7 +7,7 @@ import {LANG_INFO} from '../langInfo';
   styleUrls: ['./lang-selector.component.sass']
 })
 export class LangSelectorComponent implements OnInit {
-  langData: '';
+  langData = LANG_INFO;
   langCode: string;
   constructor(public LangSupporter: LangSupportService) {
     this.langCode = LangSupporter.langCode;

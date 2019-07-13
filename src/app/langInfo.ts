@@ -1,4 +1,5 @@
-export const LANG_INFO = [{
+export const LANG_INFO = [
+  {
   code: 'ko',
   name: '한국어',
   expression: '안녕하세요'
